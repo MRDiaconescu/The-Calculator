@@ -559,6 +559,41 @@ namespace Calculator
                     txtDisplayScreen.Text += log.doubleResult;
                 }
             }
+            
+
+
+            if (btnLogXtoPowerKofAWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn1WasClicked == 1)
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                }
+
+                else if (counterBtn1WasClicked == 2)
+
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVarX = double.Parse(btn1.Text);
+                }
+
+                else
+
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVarX = double.Parse(btn1.Text);
+                    log.intVariableK = int.Parse(btn1.Text);
+
+                    log.doubleResult = (double)1 / log.intVariableK * Math.Log(log.doubleVariableA, log.doubleVarX);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}^{log.intVariableK}({log.doubleVariableA}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+
+                }
+            } 
+            
         }
 
 
