@@ -594,6 +594,23 @@ namespace Calculator
                 }
             } 
             
+            if (btnLogSQRTAofBWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+                if (counterBtn1WasClicked == 1) { log.doubleVariableA = double.Parse(btn1.Text); }
+                else if (counterBtn1WasClicked == 2)
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+
+                    log.doubleResult = 2 * Math.Log(log.doubleVariableB, log.doubleVariableA);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"logSQRT{log.doubleVariableA}({log.doubleVariableB}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+            
         }
 
 
