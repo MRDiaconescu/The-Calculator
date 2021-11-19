@@ -611,6 +611,74 @@ namespace Calculator
                 }
             }
             
+             if (btnLogAofXaddedToLogBofXWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn1WasClicked == 1) { log.doubleVarX = double.Parse(btn1.Text); }
+
+                else if (counterBtn1WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn1.Text);
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                }
+
+                else
+                {
+                    log.doubleVarX = double.Parse(btn1.Text);
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+
+                    //log.doubleResult = Math.Pow(log.doubleVariableA, (Math.Log(log.doubleVariableB, log.doubleVariableA))/ (Math.Log(log.doubleVariableB, log.doubleVariableA)+1));
+
+                    log.doubleResult = 2 * Math.Log(log.doubleVarX, log.doubleVariableA);
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}({log.doubleVariableA}) + log{log.doubleVarX}({log.doubleVariableB}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLogBofXsubtractedFromLogAofXWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn1WasClicked == 1) { log.doubleVarX = double.Parse(btn1.Text); }
+                else if (counterBtn1WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn1.Text);
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                }
+                else
+                {
+                    log.doubleVarX = double.Parse(btn1.Text);
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+
+                    log.doubleResult = Math.Log(log.doubleVarX, log.doubleVariableA) - Math.Log(log.doubleVarX, log.doubleVariableA);
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}({log.doubleVariableA}) - log{log.doubleVarX}({log.doubleVariableB}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLog1dividedByXofAWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn1WasClicked == 1) { log.doubleVarX = double.Parse(btn1.Text); }
+                else if (counterBtn1WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn1.Text);
+                    log.doubleVariableA = double.Parse(btn1.Text);
+
+                    log.doubleResult = -Math.Log(log.doubleVariableA, log.doubleVarX);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log1/{log.doubleVarX}({log.doubleVariableA}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+            
         }
 
 
