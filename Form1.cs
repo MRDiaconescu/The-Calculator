@@ -461,6 +461,104 @@ namespace Calculator
 
                 }
             }
+            
+               if (btnLogXminus1ofAWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+                if (counterBtn1WasClicked == 1) { log.doubleVarX = double.Parse(btn1.Text); }
+                else if (counterBtn1WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn1.Text);
+                    log.doubleVariableA = double.Parse(btn1.Text);
+
+                    log.doubleResult = 1 / Math.Log(log.doubleVarX - 1, log.doubleVariableA);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVarX - 1}({log.doubleVariableA}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+
+            if (btnAtoPowerLogBCWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn1WasClicked == 1)
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                }
+
+                else if (counterBtn1WasClicked == 2)
+
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+                }
+
+                else
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+                    log.doubleVariableC = double.Parse(btn1.Text);
+
+                    // log.doubleResult = Math.Pow(log.doubleVariableA, Math.Log(log.doubleVariableC, log.doubleVariableB));
+                    log.doubleResult = log.doubleVariableA * Math.Log(log.doubleVariableC, log.doubleVariableB);
+
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"{log.doubleVariableC}^log{log.doubleVariableB}({log.doubleVariableA}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLogBSQRTAofCWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn1WasClicked == 1)
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                }
+
+                else if (counterBtn1WasClicked == 2)
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+                }
+
+                else
+
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+                    log.doubleVariableC = double.Parse(btn1.Text);
+
+                    log.doubleResult = log.doubleVariableB * Math.Log(log.doubleVariableC, log.doubleVariableA);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVariableB}SQRT{log.doubleVariableA}({log.doubleVariableC}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+
+                }
+            }
+
+            if (btnLogAofSQRTBWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+                if (counterBtn1WasClicked == 1) { log.doubleVariableA = double.Parse(btn1.Text); }
+                else if (counterBtn1WasClicked == 2)
+                {
+                    log.doubleVariableA = double.Parse(btn1.Text);
+                    log.doubleVariableB = double.Parse(btn1.Text);
+
+                    log.doubleResult = (double)1 / 2 * Math.Log(log.doubleVariableB, log.doubleVariableA);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVariableA}(SQRT({log.doubleVariableB})) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
         }
 
 
