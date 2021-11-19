@@ -563,6 +563,7 @@ namespace Calculator
 
 
 
+
         private void btn2_Click(object sender, EventArgs e)
         {
             btn2WasClicked = true;
