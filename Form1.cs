@@ -757,7 +757,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.doubleVarX = double.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -781,7 +780,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.doubleVarX = double.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -801,7 +799,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.doubleVarX = double.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -824,7 +821,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.doubleVarX = double.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -842,7 +838,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.doubleVarX = double.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -866,7 +861,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.intVarX = int.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.intVarX = int.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -898,7 +892,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1)
                 {
                     log.doubleVariableA = double.Parse(btn2.Text);
@@ -933,7 +926,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.doubleVarX = double.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -952,7 +944,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1)
                 {
                     log.doubleVariableA = double.Parse(btn2.Text);
@@ -983,7 +974,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1)
                 {
                     log.doubleVariableA = double.Parse(btn2.Text);
@@ -1126,7 +1116,6 @@ namespace Calculator
             {
                 Logarithm log;
                 log = new Logarithm();
-                log.doubleVarX = double.Parse(btn2.Text);
                 if (counterBtn2WasClicked == 1) { log.doubleVarX = double.Parse(btn2.Text); }
                 else if (counterBtn2WasClicked == 2)
                 {
@@ -1851,7 +1840,5 @@ namespace Calculator
                 }
             }
         }
-
-      
     }
 }
