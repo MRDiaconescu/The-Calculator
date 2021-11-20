@@ -284,6 +284,92 @@ namespace Calculator
                     txtDisplayScreen.Text += log.doubleResult;
                 }
             }
+            
+              if (btnLogXABWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn0WasClicked == 1) { log.doubleVarX = double.Parse(btn0.Text); }
+                else if (counterBtn0WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                }
+                else
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                    log.doubleVariableB = double.Parse(btn0.Text);
+
+                    log.doubleResult = Math.Log(log.doubleVariableA, log.doubleVarX) + Math.Log(log.doubleVariableA, log.doubleVarX);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}({log.doubleVariableA} * {log.doubleVariableB}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLogXBdividesAWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+                if (counterBtn0WasClicked == 1) { log.doubleVarX = double.Parse(btn0.Text); }
+                else if (counterBtn0WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                }
+                else
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                    log.doubleVariableB = double.Parse(btn0.Text);
+
+                    log.doubleResult = Math.Log(log.doubleVariableA, log.doubleVarX) - Math.Log(log.doubleVariableA, log.doubleVarX);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}({log.doubleVariableA} : {log.doubleVariableB}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLogXAdivides1WasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+                if (counterBtn0WasClicked == 1) { log.doubleVarX = double.Parse(btn0.Text); }
+                else if (counterBtn0WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+
+                    log.doubleResult = -Math.Log(log.doubleVariableA, log.doubleVarX);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}(1:{log.doubleVariableA}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLogXAtoPowerBWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+                if (counterBtn0WasClicked == 1) { log.doubleVarX = double.Parse(btn0.Text); }
+                else if (counterBtn0WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                }
+                else
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                    log.doubleVariableB = double.Parse(btn0.Text);
+
+                    log.doubleResult = log.doubleVariableB * Math.Log(log.doubleVariableA, log.doubleVarX);
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}({log.doubleVariableA} ^ {log.doubleVariableB}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
         }
 
 
