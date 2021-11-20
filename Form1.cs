@@ -370,6 +370,67 @@ namespace Calculator
                     txtDisplayScreen.Text += log.doubleResult;
                 }
             }
+            
+            
+            if (btnLogXtoPowerLogXAWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn0WasClicked == 1) { log.doubleVarX = double.Parse(btn0.Text); }
+                else if (counterBtn0WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+
+                    log.doubleResult = log.doubleVariableA;
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"{log.doubleVarX}^log{log.doubleVarX}({log.doubleVariableA}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+            
+            
+            if (btnLogXxNSQRTofAWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn0WasClicked == 1) { log.doubleVarX = double.Parse(btn0.Text); }
+                else if (counterBtn0WasClicked == 2)
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                }
+                else
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                    log.intVariableN = int.Parse(btn0.Text);
+
+                    log.doubleResult = (double)1 / log.intVariableN * Math.Log(log.doubleVariableA, log.doubleVarX);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.doubleVarX}x{log.intVariableN}SQRT({log.doubleVariableA}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLogXbaseXtoPowerAWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn0WasClicked == 1) { log.intVarX = int.Parse(btn0.Text); }
+                else if (counterBtn0WasClicked == 2)
+                {
+                    log.intVarX = int.Parse(btn0.Text);
+                    log.intVariableA = int.Parse(btn0.Text);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"log{log.intVarX}({log.intVarX}^{log.intVariableA}) = ";
+                    txtDisplayScreen.Text += log.intResult;
+                }
+            }
+
         }
 
 
