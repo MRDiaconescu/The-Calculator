@@ -430,7 +430,53 @@ namespace Calculator
                     txtDisplayScreen.Text += log.intResult;
                 }
             }
+            
+            
+            if (btnLnXWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
 
+                if (counterBtn0WasClicked == 1)
+                {
+                    log.doubleVarX = double.Parse(btn0.Text);
+                    log.doubleResult = Math.Log(log.doubleVarX, 2.718);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"ln({log.doubleVarX}) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+                }
+            }
+
+            if (btnLnOfAxBSQRTCWasClicked)
+            {
+                Logarithm log;
+                log = new Logarithm();
+
+                if (counterBtn0WasClicked == 1)
+                {
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                }
+                
+                else if (counterBtn0WasClicked == 2)
+
+                {
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                    log.doubleVariableB = double.Parse(btn0.Text);
+                }
+                else
+
+                {
+                    log.doubleVariableA = double.Parse(btn0.Text);
+                    log.doubleVariableB = double.Parse(btn0.Text);
+                    log.doubleVariableC = double.Parse(btn0.Text);
+
+                    log.doubleResult = Math.Log(log.doubleVariableA * Math.Pow(log.doubleVariableC, 1 / log.doubleVariableB), 2.718);
+                    txtDisplayScreen.Text += '\n';
+                    txtDisplayScreen.Text += $"ln({log.doubleVariableA}*{log.doubleVariableB}SQRT({log.doubleVariableC})) = ";
+                    txtDisplayScreen.Text += log.doubleResult;
+
+                }
+            }
         }
 
 
